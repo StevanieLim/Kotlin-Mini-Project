@@ -1,4 +1,4 @@
-package com.example.counterviewmodel
+package com.example.myrecipeapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,37 +10,21 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.counterviewmodel.ui.theme.CounterViewModelTheme
+import com.example.myrecipeapp.ui.theme.MyRecipeAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CounterViewModelTheme {
+            MyRecipeAppTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    CounterViewModel()
+                    RecipeScreen()
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    CounterViewModelTheme {
-        Greeting("Android")
     }
 }

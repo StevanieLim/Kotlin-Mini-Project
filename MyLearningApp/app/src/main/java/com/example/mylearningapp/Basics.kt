@@ -143,8 +143,24 @@ fun main(){
 //
 //Spacer Elements terbalek
 
+    //EXCEPTION
+    var number : Int
+    println("Please Enter a Number :")
+    try {
+        val number = readln().toInt()
+        println("User entered $number")
+    }catch (e: Exception){
+        //what happen when error occurs
+        println("Error ${e.message}")
+    }finally {
+        //"Twill will be execute regardless. error or no error")
+        number = 0
+    }
+
 
 }
+
+
 
 //--------------Function-------------
 
@@ -161,6 +177,8 @@ fun main(){
 //    val struck = "Hello ${coffeeDetails.name}, With ${coffeeDetails.sugarCount} cube of sugar, you're Coffee ready"
 //    return struck
 //}
+
+
 
 
 
