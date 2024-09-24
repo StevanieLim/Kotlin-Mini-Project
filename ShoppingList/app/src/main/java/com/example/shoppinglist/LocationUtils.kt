@@ -1,4 +1,4 @@
-package com.example.locationapp
+package com.example.shoppinglist
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -31,7 +31,7 @@ class LocationUtils (val context : Context){
                 super.onLocationResult(LocationResult)
                 LocationResult.lastLocation?.let{
                     val location = LocationData(latitude = it.latitude, longitude = it.longitude)
-                    viewModel.updatelocation(location)
+                    viewModel.updateLocation(location)
                 }
             }
         }
@@ -51,6 +51,8 @@ class LocationUtils (val context : Context){
                     context, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED
     }
 
+
+    //not needed now
     fun reverseGeoCodeLocation(location : LocationData) :String{
         val geocoder = Geocoder(context, Locale.getDefault())
         val coordinate = LatLng(location.latitude, location.longitude)

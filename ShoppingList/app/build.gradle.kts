@@ -51,6 +51,23 @@ android {
 
 dependencies {
 
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+
+
+    implementation ("org.osmdroid:osmdroid-android:6.1.10")
+    implementation ("org.osmdroid:osmdroid-wms:6.1.10")
+    implementation ("org.slf4j:slf4j-simple:1.7.30")
+    
+    implementation("com.google.maps.android:maps-compose:2.15.0")
+    implementation("com.google.android.gms:play-services-maps:19.0.0")
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6")
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("androidx.navigation:navigation-compose:2.8.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
+
+
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
     implementation("androidx.activity:activity-compose:1.9.1")
